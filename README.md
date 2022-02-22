@@ -1,1 +1,1 @@
-# react-chat
+# mern-chat
