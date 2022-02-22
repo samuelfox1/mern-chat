@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "develop": "concurrently \"cd server && npm run develop\" \"cd client && npm start\"",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed && cd ..",
     "start": " cd server && npm run start",
