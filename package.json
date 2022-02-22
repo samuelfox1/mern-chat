@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "cd server && npm run seed && cd .."
+    "develop": "concurrently \"cd server && npm run develop\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed && cd ..",
+    "start": " cd server && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/samuelfox1/mern-chat/issues"
   },
-  "homepage": "https://github.com/samuelfox1/mern-chat#readme"
+  "homepage": "https://github.com/samuelfox1/mern-chat#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.2"
+  }
 }
